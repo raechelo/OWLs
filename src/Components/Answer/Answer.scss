@@ -1,0 +1,15 @@
+.ans-btn {
+  border: 1px solid grey;
+  cursor: pointer;
+  font-family: $bodyfont;
+  font-size: 1rem;
+  padding:  15px 20px;
+  margin: .5rem 1rem;
+  text-align: center;
+}
+
+.ans-btn-section {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 1rem auto;
+}

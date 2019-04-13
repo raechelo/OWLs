@@ -1,0 +1,19 @@
+$imgKey: random(5);
+
+$list: 934, castle, ties, map, suitcases;
+$nth: nth($list, $imgKey);
+
+//colors
+$rav-blue: #000a90;
+$rav-silver: rgba(93, 93, 93, 1);
+$gryf-red: #7f0909;
+$gryf-gold: #ffc500;
+$sly-green: #0d6217;
+$sly-silver: #aaa;
+$huf-yellow: #eee117;
+$huf-black: rgb(28, 28, 28);
+$board: rgba(0, 0, 0, 0.7);
+
+
+//fonts
+$bodyfont: 'Ubuntu', sans-serif;

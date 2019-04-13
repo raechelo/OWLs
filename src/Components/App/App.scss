@@ -1,0 +1,59 @@
+ body {
+  background-image: url('./assets/#{$nth}.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.rav {
+  background-color: $rav-blue;
+  border: 3px solid $rav-silver;
+  color: $rav-silver;
+  font-family: $bodyfont;
+  font-size: 1.5rem;
+}
+
+.gryf {
+  background-color: $gryf-red;
+  border: 3px solid $gryf-gold;
+  color: $gryf-gold;
+  font-family: $bodyfont;
+  font-size: 1.5rem;
+}
+
+.huf {
+  background-color: $huf-yellow;
+  border: 3px solid $huf-black;
+  color: $huf-black;
+  font-family: $bodyfont;
+  font-size: 1.5rem;
+}
+
+.sly {
+  background-color: $sly-green;
+  border: 3px solid $sly-silver;
+  color: $sly-silver;
+  font-family: $bodyfont;
+  font-size: 1.5rem;
+}
+
+.btn-container {
+  background-color: $board;
+  display: grid;
+  margin: 1rem auto;
+  text-align: center;
+  width: 50%;
+
+  h2 {
+    color: rgba(128, 124, 128, 1);
+    font-family: $bodyfont;
+  }
+}
+
+.btn {
+  margin: 1rem;
+  padding: .5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
