@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Question from '../Question/Question';
 import Answer from '../Answer/Answer'
+import Player from '../Player/Player'
 
 class QuizContainer extends Component {
   constructor() {
@@ -48,7 +49,7 @@ class QuizContainer extends Component {
     return (
       <div>
         {this.state.questions.length > 0 ? gameBoard : info}
-        {/* <Player /> */}
+        <Player />
       </div>
     )
   }

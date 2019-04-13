@@ -1,0 +1,28 @@
+.house-crest {
+  width: 100%;
+}
+
+.player-section {
+  background-color: $boardBg;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 5rem auto;
+  height: 25%;
+  width: $boardW;
+
+  h6 {
+    display: inline;
+    font-family: $bodyfont;
+    font-size: 1.5rem;
+    margin: auto auto;
+  }
+}
+
+.left-side {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.right-side {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
