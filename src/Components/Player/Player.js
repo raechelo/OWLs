@@ -21,22 +21,22 @@ export default class Player extends Component {
         <article className="left-side">
           <h6 className="left-house">Gryffindor</h6>
           <h6 className="left-points">{this.state.gryfPoints} Points</h6>
-        <img className="house-crest" src={gCrest} />
+        <img className="house-crest" src={gCrest} alt="Gryffindor House Crest" />
         </article>
         <article className="right-side">
-          <img className="house-crest" src={hCrest} />
-          <h6 className="right-house">Hufflepuff</h6>
+          <img className="house-crest" src={sCrest} alt="Slytherin House Crest" />
+          <h6 className="right-house">Slytherin</h6>
           <h6 className="right-points">{this.state.hufflePoints} Points</h6>
         </article>
         <article className="left-side bot">
           <h6 className="leftt-house">Ravenclaw</h6>
           <h6 className="left-points">{this.state.ravenPoints} Points</h6>
-          <img className="house-crest" src={rCrest} />
+          <img className="house-crest" src={rCrest} alt="Ravenclaw House Crest" />
         </article>
         <article className="right-side bot">
-          <img className="house-crest" src={sCrest} />
+          <img className="house-crest" src={hCrest} alt="Hufflepuff House Crest" />
           <h6 className="right-points">{this.state.slyPoints} Points</h6>
-          <h6 className="left-house">Slytherin</h6>
+          <h6 className="left-house">Hufflepuff</h6>
         </article>
       </section>
     )

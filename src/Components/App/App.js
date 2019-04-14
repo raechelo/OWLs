@@ -46,7 +46,7 @@ class App extends Component {
     return (
       <div className="style">
       <Header />
-      {this.state.house ? <QuizContainer house={this.state.house} studySet={this.state.questions} incorrect={this.state.incorrect} /> : defaultPage}
+      {this.state.house ? <QuizContainer house={this.state.house} studySet={this.state.questions} incorrect={this.state.incorrect} saveWrongQs={this.saveWrongQuestions} /> : defaultPage}
       </div>
     )
   }
