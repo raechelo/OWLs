@@ -16,13 +16,47 @@
     font-size: 1.5rem;
     margin: auto auto;
   }
+
+
 }
 
 .left-side {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 
+  "l-house l-crest"
+  "l-points l-crest";
+  grid-auto-columns: 2fr 1fr;
+
+  .left-house {
+    grid-area: l-house;
+  }
+
+  .left-points {
+    grid-area: l-points;
+  }
+
+  img {
+    grid-area: l-crest; 
+  }
+
+
 }
 .right-side {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-areas: 
+  "r-crest r-house"
+  "r-crest r-points";
+  grid-auto-columns: 1fr 2fr;
+
+  .right-house {
+    grid-area: r-house;
+  }
+
+  .right-points {
+    grid-area: r-points;
+  }
+
+  img {
+    grid-area: r-crest; 
+  }
 }
