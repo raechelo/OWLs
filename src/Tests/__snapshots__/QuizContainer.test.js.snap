@@ -19,6 +19,19 @@ exports[`QuizContainer should match the snapshot wtih all the data passed in 1`]
     <p>
       Should you get a question correct, you will earn your house points. Should you get a quesion wrong, you will earn all other houses points.
     </p>
+    <section
+      className="disabled"
+    >
+      <p>
+        Study/Clear Previously Incorrect Questions
+      </p>
+      <button>
+        Study
+      </button>
+      <button>
+        Clear
+      </button>
+    </section>
     <button
       onClick={[Function]}
     >
