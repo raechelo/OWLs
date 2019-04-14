@@ -22,8 +22,8 @@ class Answer extends Component {
       this.props.wrongAns();
       console.log('wrong ans')
     }
-    this.props.correctAns();
     this.updateState();
+    this.props.correctAns();
     console.log('outside the if block')
   }
 
