@@ -12,8 +12,12 @@ $sly-green: #0d6217;
 $sly-silver: #aaa;
 $huf-yellow: #eee117;
 $huf-black: rgb(28, 28, 28);
-$board: rgba(0, 0, 0, 0.7);
+$boardBg: rgba(93, 93, 93, .6);
 
 
 //fonts
 $bodyfont: 'Ubuntu', sans-serif;
+
+
+// sizes
+$boardW: 65%;

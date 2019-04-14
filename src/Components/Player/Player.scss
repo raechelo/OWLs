@@ -1,0 +1,68 @@
+.house-crest {
+  width: 100%;
+}
+
+.player-section {
+  background-color: $boardBg;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 3rem auto 0rem auto;
+  padding: 10px;
+  height: 87%;
+  width: $boardW;
+
+  h6 {
+    display: inline;
+    font-family: $bodyfont;
+    font-size: 1.5rem;
+    margin: auto auto;
+  }
+}
+
+.left-side {
+  display: grid;
+  grid-template-areas: 
+  "l-house l-crest"
+  "l-points l-crest";
+  grid-auto-columns: 2fr 1fr;
+
+  .left-house {
+    grid-area: l-house;
+  }
+
+  .left-points {
+    grid-area: l-points;
+  }
+
+  img {
+    grid-area: l-crest; 
+  }
+
+
+}
+.right-side {
+  display: grid;
+  grid-template-areas: 
+  "r-crest r-house"
+  "r-crest r-points";
+  grid-auto-columns: 1fr 2fr;
+  border-left: 2px solid black;
+  padding-left: 10px;
+
+  .right-house {
+    grid-area: r-house;
+  }
+
+  .right-points {
+    grid-area: r-points;
+  }
+
+  img {
+    grid-area: r-crest; 
+  }
+
+}
+
+.bot {
+  border-top: 2px solid black;
+}

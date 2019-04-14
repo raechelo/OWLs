@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Question from '../Question/Question';
 import Answer from '../Answer/Answer'
+import Player from '../Player/Player'
 
 class QuizContainer extends Component {
   constructor() {
@@ -8,7 +9,9 @@ class QuizContainer extends Component {
     this.state = {
       category: '',
       questions: [],
-      currentQuestion: {}
+      currentQuestion: {},
+      incorrect: []
+
     }
   }
 
@@ -22,6 +25,16 @@ class QuizContainer extends Component {
     } )
   }
 
+  correctAns = () => {
+    this.randomizeQuestions();
+  }
+
+  incorrectAns = () => {
+    if (!this.state.incorrect.includes(this.state.currentQuestion)) {
+      this.setState( {incorrect: [...this.state.incorrect, this.state.currentQuestion]} );
+    }
+  }
+
 
 
   render() {
@@ -29,14 +42,17 @@ class QuizContainer extends Component {
     const gameBoard =  
     <div className="game-board">
       <Question 
-      question={this.state.currentQuestion.question} />
-      <Answer 
-      correctAnswer={this.state.currentQuestion.correctAnswer} 
-      allAnswers={this.state.currentQuestion.allAnswers} />
+        question={this.state.currentQuestion.question} />
+      <Answer
+        wrongAns={this.incorrectAns}
+        correctAns={this.randomizeQuestions} 
+        correctAnswer={this.state.currentQuestion.correctAnswer} 
+        allAnswers={this.state.currentQuestion.allAnswers} />
     </div>
 
     const info = 
     <div className="info-popup">
+      <h3>Ordinary [React] Wizarding Level</h3>
       <h3>How to Play:</h3>
       <p>You can choose from the filters to quiz yourself on specific topics or run through them at random.</p>
       <p>Should you get a question correct, you will earn your house points. Should you get a quesion wrong, you will earn all other houses points.</p>
@@ -44,11 +60,12 @@ class QuizContainer extends Component {
     </div>;
 
     console.log(this.state.questions)
+    console.log(this.state.currentQuestion)
 
     return (
-      <div>
+      <div className="game-container">
         {this.state.questions.length > 0 ? gameBoard : info}
-        {/* <Player /> */}
+        <Player house={this.props.house} />
       </div>
     )
   }

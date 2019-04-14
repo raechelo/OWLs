@@ -8,6 +8,7 @@ class App extends Component {
     super()
     this.state = {
       questions: [],
+      incorrect: [],
       house: ''
     }
   }
@@ -20,6 +21,15 @@ class App extends Component {
     this.setState( {house: e.target.textContent} )
   }
 
+  saveWrongQuestions = () => {
+    let wrongQs = JSON.stringify(this.state.incorrect)
+    localStorage.setItem("studyAgain", wrongQs);
+  }
+
+  studyWrongQs = () => {
+    let savedQs = JSON.parse(localStorage.getItem("studyAgain"));
+    this.setState( {questions: this.savedQs} )
+  }
 
   render() {
     let defaultPage = 
@@ -36,7 +46,7 @@ class App extends Component {
     return (
       <div className="style">
       <Header />
-      {this.state.house ? <QuizContainer studySet={this.state.questions} /> : defaultPage}
+      {this.state.house ? <QuizContainer house={this.state.house} studySet={this.state.questions} incorrect={this.state.incorrect} /> : defaultPage}
       </div>
     )
   }
