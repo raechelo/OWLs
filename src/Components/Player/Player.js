@@ -28,12 +28,12 @@ export default class Player extends Component {
           <h6 className="right-house">Hufflepuff</h6>
           <h6 className="right-points">{this.state.hufflePoints} Points</h6>
         </article>
-        <article className="left-side">
+        <article className="left-side bot">
           <h6 className="leftt-house">Ravenclaw</h6>
           <h6 className="left-points">{this.state.ravenPoints} Points</h6>
           <img className="house-crest" src={rCrest} />
         </article>
-        <article className="right-side">
+        <article className="right-side bot">
           <img className="house-crest" src={sCrest} />
           <h6 className="right-points">{this.state.slyPoints} Points</h6>
           <h6 className="left-house">Slytherin</h6>

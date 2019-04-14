@@ -21,10 +21,23 @@
     text-decoration: underline;
     text-transform: uppercase;
   }
+
+  p {
+    font-size: 1.4rem;
+  }
 }
 
 .game-board {
   background-color: $boardBg;
   margin: 1rem auto;
   width: $boardW;
+}
+
+.game-container {
+  display: grid;
+  grid-template-areas: 
+  "question"
+  "buttons"
+  "player";
+  grid-template-rows: 1fr 2fr 3fr;
 }
