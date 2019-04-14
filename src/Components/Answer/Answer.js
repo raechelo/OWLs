@@ -5,8 +5,8 @@ class Answer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allAnswers: this.props.allAnswers,
-      correctAnswer: this.props.correctAnswer,
+      allAnswers: [],
+      correctAnswer: '',
       userAns: ''
     }
   }
@@ -20,9 +20,9 @@ class Answer extends Component {
     this.setUserAnswer();
   }
 
-  setUserAnswer = (e) => {
-    if (!this.state.userAns === this.state.correctAnswer) {
-      this.props.wrongAns();
+  setUserAnswer = () => {
+    if (this.state.userAns !== this.state.correctAnswer) {
+      this.props.incorrectAns();
     }
     this.props.nextQuestion();
   }

@@ -11,7 +11,6 @@ class QuizContainer extends Component {
       questions: [],
       currentQuestion: {},
       incorrect: []
-
     }
   }
 
@@ -21,17 +20,16 @@ class QuizContainer extends Component {
 
     this.setState( {
       questions: shuffledQs,
-      currentQuestion: currentQ
+      currentQuestion: currentQ,
+      incorrect: this.props.incorrect
     } )
-  }
-
-  correctAns = () => {
-    this.randomizeQuestions();
   }
 
   incorrectAns = () => {
     if (!this.state.incorrect.includes(this.state.currentQuestion)) {
-      this.setState( {incorrect: [...this.state.incorrect, this.state.currentQuestion]} );
+      let newState = this.state.incorrect.push(this.state.currentQuestion)
+      this.setState( { incorrect: newState } )
+      this.props.saveWrongQs();
     }
   }
 
@@ -44,7 +42,8 @@ class QuizContainer extends Component {
       <Question 
         question={this.state.currentQuestion.question} />
       <Answer
-        wrongAns={this.incorrectAns}
+        saveWrongQs={this.props.saveWrongQs}
+        incorrectAns={this.incorrectAns}
         nextQuestion={this.randomizeQuestions} 
         correctAnswer={this.state.currentQuestion.correctAnswer} 
         allAnswers={this.state.currentQuestion.allAnswers} />
@@ -59,8 +58,8 @@ class QuizContainer extends Component {
       <button onClick={this.randomizeQuestions}>Got it!</button>
     </div>;
 
-    console.log(this.state.questions)
-    console.log(this.state.currentQuestion)
+    // console.log(this.state.questions)
+    // console.log(this.state.incorrect)
 
     return (
       <div className="game-container">
