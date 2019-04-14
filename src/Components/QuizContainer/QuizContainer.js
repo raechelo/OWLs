@@ -55,6 +55,11 @@ class QuizContainer extends Component {
       <h3>How to Play:</h3>
       <p>You can choose from the filters to quiz yourself on specific topics or run through them at random.</p>
       <p>Should you get a question correct, you will earn your house points. Should you get a quesion wrong, you will earn all other houses points.</p>
+      <section className="disabled">
+        <p>Study/Clear Previously Incorrect Questions</p>
+        <button onClick={this.props.studyWrongQs}>Study</button>
+        <button onClick={this.props.clearStorage}>Clear</button>
+      </section>
       <button onClick={this.randomizeQuestions}>Got it!</button>
     </div>;
 

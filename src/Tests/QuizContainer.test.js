@@ -7,9 +7,13 @@ describe('QuizContainer', () => {
   
   let wrapper;
 
+  const mockIncorrect = [];
+
+  const mockSaveWrongQs = jest.fn();
+
   beforeEach(() => {
     wrapper = shallow (
-      <QuizContainer studySet={data} />
+      <QuizContainer incorrect={mockIncorrect} studySet={data} saveWrongQs={mockSaveWrongQs} />
     )
   });
 
@@ -25,5 +29,12 @@ describe('QuizContainer', () => {
     expect(wrapper.state('questions')).toEqual([]);
     wrapper.instance().randomizeQuestions();
     expect(wrapper.state('questions')).toHaveLength(29);
+  });
+
+  it('should add incorrect questions to the proper array', () => {
+    expect(wrapper.state('incorrect')).toEqual([]);
+    wrapper.instance().randomizeQuestions();
+    wrapper.instance().incorrectAns();
+    expect(wrapper.state('incorrect')).toEqual(1);
   });
 })

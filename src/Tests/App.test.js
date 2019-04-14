@@ -7,6 +7,12 @@ import { shallow } from 'enzyme';
 
 describe('App', () => {
 
+  const setSpy = jest.spyOn(Storage.prototype, 'setItem');
+
+  const getSpy = jest.spyOn(Storage.prototype, 'getItem');
+
+  const clearSpy = jest.spyOn(Storage.prototype, 'clear');
+
   let wrapper;
 
   beforeEach(() => {
@@ -28,4 +34,19 @@ describe('App', () => {
     wrapper.instance().handleClick( { target: { textContent: 'ravenclaw' } } );
     expect(wrapper.state('house')).toEqual('ravenclaw');
   });
+
+  it('should have cleared the local storage', () => {
+    wrapper.instance().clearOldQs();
+    expect(clearSpy).toHaveBeenCalled();
+  });
+
+  it('should save items to local storage', () => {
+    wrapper.instance().saveWrongQuestions();
+    expect(setSpy).toHaveBeenCalled();
+  });
+
+  it('should get questions from local storage', () => {
+    wrapper.instance().studyWrongQs();
+    expect(getSpy).toHaveBeenCalled();
+  })
 })
