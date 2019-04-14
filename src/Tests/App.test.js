@@ -48,5 +48,5 @@ describe('App', () => {
   it('should get questions from local storage', () => {
     wrapper.instance().studyWrongQs();
     expect(getSpy).toHaveBeenCalled();
-  })
+  });
 })

@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Filter should match the snapshot with all the data passed in 1`] = `
-<p>
-  heyo
-</p>
+<div>
+  <button
+    onClick={[Function]}
+  >
+    React
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Redux
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Router
+  </button>
+</div>
 `;
