@@ -45,7 +45,7 @@ class QuizContainer extends Component {
         question={this.state.currentQuestion.question} />
       <Answer
         wrongAns={this.incorrectAns}
-        correctAns={this.randomizeQuestions} 
+        nextQuestion={this.randomizeQuestions} 
         correctAnswer={this.state.currentQuestion.correctAnswer} 
         allAnswers={this.state.currentQuestion.allAnswers} />
     </div>
