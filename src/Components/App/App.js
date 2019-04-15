@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import data from '../../data'
+// import data from '../../data'
 import Header from '../Header/Header';
 import QuizContainer from '../QuizContainer/QuizContainer'
 
@@ -14,7 +14,10 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this.setState( {questions: data} )
+    fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/raechelo/questions')
+    .then(res => res.json())
+    .then(data => this.setState( {questions: data.questions} ) )
+    .catch(err => { throw new Error(err) } )
   }
 
   handleClick = (e) => {
