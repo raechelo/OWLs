@@ -1,5 +1,5 @@
 .ans-btn {
-  background-color: hsla(37, 70%, 80%, 1);
+  background-color: $ans-bg;
   border: none;
   color: $board-text;
   cursor: pointer;
@@ -18,8 +18,7 @@
   button {
     &:hover {
       box-shadow: 2px 2px 3px $boardBg-shadow;
-      background-color: $board-background-hover;
-      color: $board-btn-text;
+      background-color: $ans-hover;
       text-decoration: underline;
     }
   }

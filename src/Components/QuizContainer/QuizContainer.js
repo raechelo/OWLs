@@ -110,12 +110,6 @@ class QuizContainer extends Component {
         allAnswers={this.state.currentQuestion.allAnswers} />
     </div>
 
-    // write method to add points
-    // put house point in state
-    // pass method to answr comp to happen with answers & update this app state
-    // pass the housepoints to player state to populate
-    // player state may need a rework, lesser the state/class comp and instead populate from props
-
 
     return (
       <div className="game-container">
