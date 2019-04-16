@@ -1,21 +1,21 @@
 .house-crest {
-  width: 100%;
+  width: 85%;
 }
 
 .player-section {
   background-color: $boardBg;
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  margin: 3rem auto 0rem auto;
-  padding: 10px;
-  height: 50%;
-  width: $boardW;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-right: 10px;
+  width: 25%;
 
   h6 {
+    color: papayawhip;
     display: inline;
     font-family: $bodyfont;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: auto auto;
+    text-shadow: -2px 1px 3px saddlebrown;
   }
 }
 
@@ -36,33 +36,7 @@
 
   img {
     grid-area: l-crest; 
+    width: 100%;
   }
 
-
-}
-.right-side {
-  display: grid;
-  grid-template-areas: 
-  "r-crest r-house"
-  "r-crest r-points";
-  grid-auto-columns: 1fr 2fr;
-  border-left: 2px solid black;
-  padding-left: 10px;
-
-  .right-house {
-    grid-area: r-house;
-  }
-
-  .right-points {
-    grid-area: r-points;
-  }
-
-  img {
-    grid-area: r-crest; 
-  }
-
-}
-
-.bot {
-  border-top: 2px solid black;
 }

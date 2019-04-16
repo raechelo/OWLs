@@ -1,10 +1,8 @@
  body {
-  background-image: url('./assets/#{$nth}.jpg');
+  background-image: url('./assets/934.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-
 
 .rav {
   background-color: $rav-blue;
@@ -12,6 +10,12 @@
   color: $rav-silver;
   font-family: $bodyfont;
   font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: $rav-blue-hover;
+    color:$rav-silver-hover;
+  }
 }
 
 .gryf {
@@ -20,6 +24,12 @@
   color: $gryf-gold;
   font-family: $bodyfont;
   font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: $gryf-red-hover;
+    color:$gryf-gold-hover;
+  }
 }
 
 .huf {
@@ -28,6 +38,12 @@
   color: $huf-black;
   font-family: $bodyfont;
   font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: $huf-yellow-hover;
+    color:$huf-black-hover;
+  }
 }
 
 .sly {
@@ -36,17 +52,23 @@
   color: $sly-silver;
   font-family: $bodyfont;
   font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: $sly-green-hover;
+    color:$sly-silver-hover;
+  }
 }
 
 .btn-container {
   background-color: $boardBg;
   display: grid;
-  margin: 1rem auto;
+  margin: 4rem;
   text-align: center;
   width: 50%;
 
   h2 {
-    color: rgba(128, 124, 128, 1);
+    color: hsl(39, 28%, 18%);
     font-family: $bodyfont;
   }
 }
@@ -56,4 +78,8 @@
   padding: .5rem;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+  }
 }

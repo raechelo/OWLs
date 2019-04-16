@@ -21,13 +21,24 @@ describe('App', () => {
     )
   });
 
+  afterEach(() => {
+    setSpy.mockClear();
+    getSpy.mockClear();
+    clearSpy.mockClear();
+  })
+
   it('should match the snapshot with all the data passed in', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should have a proper default state', () => {
+  it('should have a proper default state', () => {
     expect(wrapper.state()).toEqual( {questions: [], incorrect: [], house: ''} )
   });
+
+  it.skip('should mount the component', () => {
+    wrapper.instance().componentDidMount();
+    expect(mountSpy).toHaveBeenCalled();
+  })
 
   it('should update the house on user choice', () => {
     expect(wrapper.state('house')).toEqual('');

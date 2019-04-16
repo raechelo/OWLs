@@ -1,8 +1,10 @@
 .ans-btn {
-  border: 1px solid grey;
+  background-color: hsla(37, 70%, 80%, 1);
+  border: none;
+  color: $board-text;
   cursor: pointer;
   font-family: $bodyfont;
-  font-size: 1rem;
+  font-size: .75rem;
   padding:  15px 20px;
   margin: .5rem 1rem;
   text-align: center;
@@ -12,4 +14,13 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   margin: 1rem auto;
+
+  button {
+    &:hover {
+      box-shadow: 2px 2px 3px $boardBg-shadow;
+      background-color: $board-background-hover;
+      color: $board-btn-text;
+      text-decoration: underline;
+    }
+  }
 }

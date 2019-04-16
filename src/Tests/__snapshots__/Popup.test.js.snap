@@ -20,7 +20,10 @@ exports[`Popup should match the snapshot with all the data passed in 1`] = `
     className="disabled"
   >
     <p>
-      To Study previously incorrect questions click 'Study' then Start!
+      To study previously incorrect questions click 'Study' then Start!
+    </p>
+    <p>
+      To filter the questions available, choose your topic
     </p>
     <button>
       Study
