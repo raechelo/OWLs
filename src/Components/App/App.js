@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import data from '../../data'
 import Header from '../Header/Header';
 import QuizContainer from '../QuizContainer/QuizContainer'
 

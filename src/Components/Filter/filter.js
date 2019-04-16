@@ -8,13 +8,6 @@ class Filter extends Component {
     }
   }
 
-  updateCategory = () => {
-    this.setState( {
-      category: this.props.category,
-      questions: this.props.studySet
-    } )
-  }
-
   filterBy = (e) => {
     let cat = e.target.textContent
     let filteredQs = this.props.studySet.filter(q => q.category === cat);
@@ -22,6 +15,7 @@ class Filter extends Component {
       category: cat,
       questions: filteredQs
     } )
+    console.log(filteredQs)
   }
 
   render () {

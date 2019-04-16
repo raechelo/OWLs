@@ -23,6 +23,9 @@ class Answer extends Component {
   setUserAnswer = () => {
     if (this.state.userAns !== this.state.correctAnswer) {
       this.props.incorrectAns();
+      this.props.addOtherPoints();
+    } else {
+      this.props.addPoints();
     }
     this.props.nextQuestion();
   }

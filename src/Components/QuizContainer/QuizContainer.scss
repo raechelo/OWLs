@@ -1,18 +1,29 @@
 .info-popup {
   background-color: $boardBg;
-  color: white;
+  color: $board-text;
   font-family: $bodyfont;
-  font-size: 1.5rem;
-  margin: 1rem auto;
+  font-size: 1rem;
+  margin: 0 auto;
   padding: 10px;
   text-align: center;
   width: 65%;
 
   button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: $board-text;
+    color: $board-btn-text;
     font-family: $bodyfont;
     font-size: 1rem;
+    margin: .5rem;
     padding: 5px 10px;
-    cursor: pointer;
+
+    &:hover {
+      background-color: $board-background-hover;
+      color: $board-btn-text-hover;
+      text-decoration: underline;
+    }
   }
 
   h3 {
@@ -23,21 +34,16 @@
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }
 
 .game-board {
   background-color: $boardBg;
-  margin: 1rem auto;
   width: $boardW;
 }
 
 .game-container {
-  display: grid;
-  grid-template-areas: 
-  "question"
-  "buttons"
-  "player";
-  grid-template-rows: 1fr 2fr;
+  display: flex;
+  justify-content: space-between;
 }
