@@ -5,9 +5,6 @@ exports[`Popup should match the snapshot with all the data passed in 1`] = `
   className="info-popup"
 >
   <h3>
-    Ordinary [React] Wizarding Level
-  </h3>
-  <h3>
     How to Play:
   </h3>
   <p>
@@ -16,22 +13,15 @@ exports[`Popup should match the snapshot with all the data passed in 1`] = `
   <p>
     Should you get a question correct, you will earn your house points. Should you get a quesion wrong, you will earn all other houses points.
   </p>
-  <section
-    className="disabled"
-  >
-    <p>
-      To study previously incorrect questions click 'Study' then Start!
-    </p>
-    <p>
-      To filter the questions available, choose your topic
-    </p>
-    <button>
-      Study
-    </button>
-    <button>
-      Clear
-    </button>
-  </section>
+  <p>
+    To study previously incorrect questions click 'Study' then Start!
+  </p>
+  <button>
+    Study
+  </button>
+  <button>
+    Clear
+  </button>
   <button>
     Start!
   </button>

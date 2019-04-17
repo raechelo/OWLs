@@ -14,13 +14,17 @@ describe('Answer', () => {
 
   const mockIncorrectAns = jest.fn(); 
 
+  const mockAddPoints = jest.fn(); 
+
+  const mockAddOtherPoints = jest.fn(); 
+
   beforeEach(() => {
     wrapper = shallow (
-      <Answer allAnswers={mockAnswers} correctAnswer={mockCorrectAnswer} incorrectAns={mockIncorrectAns} nextQuestion={mockNextQuestion} />
+      <Answer allAnswers={mockAnswers} correctAnswer={mockCorrectAnswer} incorrectAns={mockIncorrectAns} nextQuestion={mockNextQuestion} addPoints={mockAddPoints} addOtherPoints={mockAddOtherPoints} />
     )
   });
 
-  it.skip('should match the snapshot with all the data passed in', () => {
+  it('should match the snapshot with all the data passed in', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -32,6 +36,19 @@ describe('Answer', () => {
     expect(wrapper.state()).toEqual( {allAnswers: [], correctAnswer: '', userAns: ''} );
     wrapper.instance().updateState( { target: { value: 'Caput Draconis' } } );
     expect(wrapper.state()).toEqual( {allAnswers: mockAnswers, correctAnswer: mockCorrectAnswer, userAns: 'Caput Draconis'} );
+  });
+
+  it('should set the userAnswer', () => {
+    wrapper.setState( {correctAnswer: 'Dobby', userAns: ''} );
+    wrapper.instance().setUserAnswer();
+    expect(mockIncorrectAns).toHaveBeenCalled();
+    expect(mockAddOtherPoints).toHaveBeenCalled();
+    expect(mockNextQuestion).toHaveBeenCalled();
+
+    wrapper.setState( {correctAnswer:'Dobby', userAns:'Dobby'} );
+    wrapper.instance().setUserAnswer();
+    expect(mockAddPoints).toHaveBeenCalled();
+    expect(mockNextQuestion).toHaveBeenCalled();
   });
 
   

@@ -16,12 +16,4 @@ describe('Player', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should have a proper default state', () => {
-    expect(wrapper.state()).toEqual( {
-      hufflePoints: 0,
-      slyPoints: 0,
-      gryfPoints: 0,
-      ravenPoints: 0
-    } )
-  })
 })

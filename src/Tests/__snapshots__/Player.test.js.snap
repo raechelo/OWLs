@@ -15,7 +15,6 @@ exports[`Player should match the snapshot with all the data passed in 1`] = `
     <h6
       className="left-points"
     >
-      0
        Points
     </h6>
     <img
@@ -25,7 +24,7 @@ exports[`Player should match the snapshot with all the data passed in 1`] = `
     />
   </article>
   <article
-    className="right-side"
+    className="left-side"
   >
     <img
       alt="Slytherin House Crest"
@@ -33,29 +32,27 @@ exports[`Player should match the snapshot with all the data passed in 1`] = `
       src="sly-crest.png"
     />
     <h6
-      className="right-house"
+      className="left-house"
     >
       Slytherin
     </h6>
     <h6
-      className="right-points"
+      className="left-points"
     >
-      0
        Points
     </h6>
   </article>
   <article
-    className="left-side bot"
+    className="left-side"
   >
     <h6
-      className="leftt-house"
+      className="left-house"
     >
       Ravenclaw
     </h6>
     <h6
       className="left-points"
     >
-      0
        Points
     </h6>
     <img
@@ -65,17 +62,16 @@ exports[`Player should match the snapshot with all the data passed in 1`] = `
     />
   </article>
   <article
-    className="right-side bot"
+    className="left-side"
   >
     <img
       alt="Hufflepuff House Crest"
-      className="house-crest"
+      className="left-crest"
       src="hufflepuff.png"
     />
     <h6
-      className="right-points"
+      className="left-points"
     >
-      0
        Points
     </h6>
     <h6
