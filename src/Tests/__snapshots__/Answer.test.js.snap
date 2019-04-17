@@ -1,3 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Answer should match the snapshot with all the data passed in 1`] = `undefined`;
+exports[`Answer should match the snapshot with all the data passed in 1`] = `
+<section
+  className="ans-btn-section"
+>
+  <button
+    className="ans-btn"
+    onClick={[Function]}
+    value="Prongs"
+  >
+    Prongs
+  </button>
+  <button
+    className="ans-btn"
+    onClick={[Function]}
+    value="Moony"
+  >
+    Moony
+  </button>
+  <button
+    className="ans-btn"
+    onClick={[Function]}
+    value="Wormtail"
+  >
+    Wormtail
+  </button>
+  <button
+    className="ans-btn"
+    onClick={[Function]}
+    value="Padfoot"
+  >
+    Padfoot
+  </button>
+</section>
+`;

@@ -46,6 +46,7 @@ class QuizContainer extends Component {
     switch (this.state.house) {
       case 'gryffindor' :
         this.setState( { g: this.state.g += 100 } )
+        console.log(this.state.g)
       break;
       case 'slytherin':
       this.setState( { s: this.state.s += 100 } )
@@ -81,11 +82,17 @@ class QuizContainer extends Component {
           s: this.state.g += 100
         } )
       break;
-      default:
+      case 'ravenclaw':
       this.setState( { 
         r: this.state.h += 100,
         s: this.state.s += 100,
         s: this.state.g += 100
+      } )
+      default:
+      this.setState( { 
+        r: this.state.h,
+        s: this.state.s,
+        s: this.state.g
       } )
     }
   }
@@ -95,9 +102,6 @@ class QuizContainer extends Component {
   render() {
     const gameBoard =  
     <div className="game-board">
-      <Filter 
-        studySet={this.state.questions}
-        category={this.state.category} />
       <Question 
         question={this.state.currentQuestion.question} />
       <Answer
@@ -116,11 +120,17 @@ class QuizContainer extends Component {
         {this.state.questions.length > 0 
         ? gameBoard 
         : <Popup 
-        clearStorage={this.props.clearStorage}
-        randomizeQuestions={this.randomizeQuestions}
-        studyWrongQs={this.props.studyWrongQs}
-         />}
-        <Player house={this.props.house} h={this.state.h} s={this.state.s} g={this.state.g} r={this.state.r} />
+          clearStorage={this.props.clearStorage}
+          randomizeQuestions={this.randomizeQuestions}
+          studyWrongQs={this.props.studyWrongQs}
+          filterBy={this.filterBy}
+         /> }
+        <Player 
+          house={this.props.house} 
+          h={this.state.h} 
+          s={this.state.s} 
+          g={this.state.g} 
+          r={this.state.r} />
       </div>
     )
   }

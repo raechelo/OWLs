@@ -4,13 +4,41 @@ exports[`QuizContainer should match the snapshot wtih all the data passed in 1`]
 <div
   className="game-container"
 >
-  <Filter
-    category=""
-    studySet={Array []}
-  />
   <Popup
     randomizeQuestions={[Function]}
   />
-  <Player />
+  <Player
+    g={0}
+    h={0}
+    house="ravenclaw"
+    r={0}
+    s={0}
+  />
+</div>
+`;
+
+exports[`QuizContainer should match the snapshot wtih all the data passed in 2`] = `
+<div
+  className="game-container"
+>
+  <div
+    className="game-board"
+  >
+    <Question />
+    <Answer
+      addOtherPoints={[Function]}
+      addPoints={[Function]}
+      incorrectAns={[Function]}
+      nextQuestion={[Function]}
+      saveWrongQs={[MockFunction]}
+    />
+  </div>
+  <Player
+    g={0}
+    h={0}
+    house="ravenclaw"
+    r={0}
+    s={0}
+  />
 </div>
 `;

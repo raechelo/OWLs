@@ -15,7 +15,6 @@ class Filter extends Component {
       category: cat,
       questions: filteredQs
     } )
-    console.log(filteredQs)
   }
 
   render () {

@@ -29,15 +29,29 @@ describe('App', () => {
 
   it('should match the snapshot with all the data passed in', () => {
     expect(wrapper).toMatchSnapshot();
+
+    wrapper.setState( {house: 'ravenclaw'} );
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should have a proper default state', () => {
     expect(wrapper.state()).toEqual( {questions: [], incorrect: [], house: ''} )
   });
 
-  it.skip('should mount the component', () => {
-    wrapper.instance().componentDidMount();
-    expect(mountSpy).toHaveBeenCalled();
+  it('should fetch the data', () => {
+    const mockResponse = {};
+    const mockJsonPromise = Promise.resolve(mockResponse);
+    const mockFetch = Promise.resolve({
+      json: () => mockJsonPromise
+    });
+    jest.spyOn(global, 'fetch').mockImplementation(() => mockFetch);
+
+    const wrapper = shallow(<App />);
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(global.fetch).toHaveBeenCalledWith('https://fe-apps.herokuapp.com/api/v1/memoize/1901/raechelo/questions');
+
+    global.fetch.mockClear()
   })
 
   it('should update the house on user choice', () => {
