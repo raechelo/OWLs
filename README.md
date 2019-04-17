@@ -32,6 +32,9 @@ Question Screen
 
 [![screencapture-localhost-3001-2019-04-16-19-50-45.png](https://i.postimg.cc/2SBcL4wP/screencapture-localhost-3001-2019-04-16-19-50-45.png)](https://postimg.cc/jDtQGnBX)
 
+Testing Percentages, 98.53% total testing coverage
+[![Screen-Shot-2019-04-17-at-8-26-40-AM.png](https://i.postimg.cc/DZ0j6pCQ/Screen-Shot-2019-04-17-at-8-26-40-AM.png)](https://postimg.cc/G80xhKn9)
+
 ## Learning Goals
 
 The developer was to learn how to properly structure components, when to make a component stateful and when not, and how to test the components. The developer was to further work with Jest and Enzyme and cement their knowledge of the library and framework, the syntax involved, what to test, and how to test it.
