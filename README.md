@@ -20,6 +20,17 @@ Memoize was a one week solo project during weeks 5 and 6 of Mod 2. The project w
 
 ## Screenshots
 
+Splash Screen
+
+[![screencapture-localhost-3001-2019-04-16-19-48-35.png](https://i.postimg.cc/c1X5p1C5/screencapture-localhost-3001-2019-04-16-19-48-35.png)](https://postimg.cc/9zwpThGG)
+
+Popup Screen
+
+[![screencapture-localhost-3001-2019-04-16-19-48-48.png](https://i.postimg.cc/W3mxFM22/screencapture-localhost-3001-2019-04-16-19-48-48.png)](https://postimg.cc/bDJm4SDM)
+
+Question Screen
+
+[![screencapture-localhost-3001-2019-04-16-19-50-45.png](https://i.postimg.cc/2SBcL4wP/screencapture-localhost-3001-2019-04-16-19-50-45.png)](https://postimg.cc/jDtQGnBX)
 
 ## Learning Goals
 
