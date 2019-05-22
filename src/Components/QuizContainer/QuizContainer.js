@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Question from '../Question/Question';
-import Answer from '../Answer/Answer';
-import Player from '../Player/Player';
-import Filter from '../Filter/filter';
-import Popup from '../Popup/Popup';
+import Answer from '../Answer/Answer'
 
 class QuizContainer extends Component {
   constructor() {
@@ -11,16 +8,9 @@ class QuizContainer extends Component {
     this.state = {
       category: '',
       questions: [],
-      currentQuestion: {},
-      incorrect: [],
-      house: '',
-      h: 0,
-      r: 0,
-      g: 0,
-      s: 0
-      }
+      currentQuestion: {}
     }
-  
+  }
 
   randomizeQuestions = () => {
   let shuffledQs = this.props.studySet.sort(() => 0.5 - Math.random())
@@ -28,112 +18,39 @@ class QuizContainer extends Component {
 
     this.setState( {
       questions: shuffledQs,
-      currentQuestion: currentQ,
-      incorrect: this.props.incorrect,
-      house: this.props.house
+      currentQuestion: currentQ
     } )
-  }
-
-  incorrectAns = () => {
-    if (!this.state.incorrect.includes(this.state.currentQuestion)) {
-      let newState = this.state.incorrect.push(this.state.currentQuestion)
-      this.setState( { incorrect: newState } )
-      this.props.saveWrongQs();
-    }
-  }
-
-  addPoints = () => {
-    switch (this.state.house) {
-      case 'gryffindor' :
-        this.setState( { g: this.state.g += 100 } )
-        console.log(this.state.g)
-      break;
-      case 'slytherin':
-      this.setState( { s: this.state.s += 100 } )
-      break
-      case 'hufflepuff':
-      this.setState( { h: this.state.h += 100 } )
-      break;
-      default:
-      this.setState( { r: this.state.r += 100 } )
-    }
-  }
-
-  addOtherPoints = () => {
-    switch (this.state.house) {
-      case 'gryffindor' :
-        this.setState( { 
-          r: this.state.r += 100,
-          s: this.state.s += 100,
-          s: this.state.h += 100
-        } )
-      break;
-      case 'slytherin':
-        this.setState( { 
-          r: this.state.r += 100,
-          s: this.state.g += 100,
-          s: this.state.h += 100
-        } )
-      break
-      case 'hufflepuff':
-        this.setState( { 
-          r: this.state.r += 100,
-          s: this.state.s += 100,
-          s: this.state.g += 100
-        } )
-      break;
-      case 'ravenclaw':
-      this.setState( { 
-        r: this.state.h += 100,
-        s: this.state.s += 100,
-        s: this.state.g += 100
-      } )
-      default:
-      this.setState( { 
-        r: this.state.h,
-        s: this.state.s,
-        s: this.state.g
-      } )
-    }
   }
 
 
 
   render() {
+
     const gameBoard =  
     <div className="game-board">
       <Question 
-        question={this.state.currentQuestion.question} />
-      <Answer
-        addOtherPoints={this.addOtherPoints}
-        addPoints={this.addPoints}
-        saveWrongQs={this.props.saveWrongQs}
-        incorrectAns={this.incorrectAns}
-        nextQuestion={this.randomizeQuestions} 
-        correctAnswer={this.state.currentQuestion.correctAnswer} 
-        allAnswers={this.state.currentQuestion.allAnswers} />
+      question={this.state.currentQuestion.question} />
+      <Answer 
+      correctAnswer={this.state.currentQuestion.correctAnswer} 
+      allAnswers={this.state.currentQuestion.allAnswers} />
     </div>
 
+    const info = 
+    <div className="info-popup">
+      <h3>How to Play:</h3>
+      <p>You can choose from the filters to quiz yourself on specific topics or run through them at random. Should you get a question correct, you will earn your house points. Should you get a quesion wrong, you will earn all other houses points.</p>
+      <button onClick={this.randomizeQuestions}>Got it!</button>
+    </div>;
+
+    console.log(this.state.questions)
 
     return (
-      <div className="game-container">
-        {this.state.questions.length > 0 
-        ? gameBoard 
-        : <Popup 
-          clearStorage={this.props.clearStorage}
-          randomizeQuestions={this.randomizeQuestions}
-          studyWrongQs={this.props.studyWrongQs}
-          filterBy={this.filterBy}
-         /> }
-        <Player 
-          house={this.props.house} 
-          h={this.state.h} 
-          s={this.state.s} 
-          g={this.state.g} 
-          r={this.state.r} />
+      <div>
+        {this.state.questions.length > 0 ? gameBoard : info}
       </div>
     )
   }
 }
+
 
 export default QuizContainer;
