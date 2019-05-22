@@ -1,14 +1,14 @@
 {
-  "main.css": "/raechelo/OWLs/static/css/main.afdb2df8.chunk.css",
-  "main.js": "/raechelo/OWLs/static/js/main.0795b847.chunk.js",
-  "main.js.map": "/raechelo/OWLs/static/js/main.0795b847.chunk.js.map",
-  "runtime~main.js": "/raechelo/OWLs/static/js/runtime~main.f405808f.js",
-  "runtime~main.js.map": "/raechelo/OWLs/static/js/runtime~main.f405808f.js.map",
-  "static/js/2.d6a534e5.chunk.js": "/raechelo/OWLs/static/js/2.d6a534e5.chunk.js",
-  "static/js/2.d6a534e5.chunk.js.map": "/raechelo/OWLs/static/js/2.d6a534e5.chunk.js.map",
-  "index.html": "/raechelo/OWLs/index.html",
-  "precache-manifest.1cb4f7bdd6a8ef54f31cfd04b5690032.js": "/raechelo/OWLs/precache-manifest.1cb4f7bdd6a8ef54f31cfd04b5690032.js",
-  "service-worker.js": "/raechelo/OWLs/service-worker.js",
-  "static/css/main.afdb2df8.chunk.css.map": "/raechelo/OWLs/static/css/main.afdb2df8.chunk.css.map",
-  "static/media/index.scss": "/raechelo/OWLs/static/media/ties.8c147e89.jpg"
+  "main.css": "/OWLs/static/css/main.25f112f9.chunk.css",
+  "main.js": "/OWLs/static/js/main.787a58c6.chunk.js",
+  "main.js.map": "/OWLs/static/js/main.787a58c6.chunk.js.map",
+  "runtime~main.js": "/OWLs/static/js/runtime~main.a0fb5096.js",
+  "runtime~main.js.map": "/OWLs/static/js/runtime~main.a0fb5096.js.map",
+  "static/js/2.d6a534e5.chunk.js": "/OWLs/static/js/2.d6a534e5.chunk.js",
+  "static/js/2.d6a534e5.chunk.js.map": "/OWLs/static/js/2.d6a534e5.chunk.js.map",
+  "index.html": "/OWLs/index.html",
+  "precache-manifest.d899b1551459bb1899dc8b24e146a648.js": "/OWLs/precache-manifest.d899b1551459bb1899dc8b24e146a648.js",
+  "service-worker.js": "/OWLs/service-worker.js",
+  "static/css/main.25f112f9.chunk.css.map": "/OWLs/static/css/main.25f112f9.chunk.css.map",
+  "static/media/index.scss": "/OWLs/static/media/castle.42c973d6.jpg"
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/raechelo/OWLs/precache-manifest.1cb4f7bdd6a8ef54f31cfd04b5690032.js"
+  "/OWLs/precache-manifest.d899b1551459bb1899dc8b24e146a648.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/raechelo/OWLs/index.html", {
+workbox.routing.registerNavigationRoute("/OWLs/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
