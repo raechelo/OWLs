@@ -1,4 +1,4 @@
-## Memoize
+# OWLs
 
 Memoize was a one week solo project during weeks 5 and 6 of Mod 2. The project was intended for the developer to solidify their use of React as well as composing a usable app out of React. This project was themed after Harry Potter and a type of test within the series called the O.W.L.s, or Ordinary Wizarding Levels.
 
