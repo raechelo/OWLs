@@ -1,5 +1,5 @@
 {
-  "main.css": "/OWLs/static/css/main.25f112f9.chunk.css",
+  "main.css": "/OWLs/static/css/main.92cd434b.chunk.css",
   "main.js": "/OWLs/static/js/main.787a58c6.chunk.js",
   "main.js.map": "/OWLs/static/js/main.787a58c6.chunk.js.map",
   "runtime~main.js": "/OWLs/static/js/runtime~main.a0fb5096.js",
@@ -7,8 +7,8 @@
   "static/js/2.d6a534e5.chunk.js": "/OWLs/static/js/2.d6a534e5.chunk.js",
   "static/js/2.d6a534e5.chunk.js.map": "/OWLs/static/js/2.d6a534e5.chunk.js.map",
   "index.html": "/OWLs/index.html",
-  "precache-manifest.d899b1551459bb1899dc8b24e146a648.js": "/OWLs/precache-manifest.d899b1551459bb1899dc8b24e146a648.js",
+  "precache-manifest.216a7cb38ca067bb945e2038fa94157f.js": "/OWLs/precache-manifest.216a7cb38ca067bb945e2038fa94157f.js",
   "service-worker.js": "/OWLs/service-worker.js",
-  "static/css/main.25f112f9.chunk.css.map": "/OWLs/static/css/main.25f112f9.chunk.css.map",
-  "static/media/index.scss": "/OWLs/static/media/castle.42c973d6.jpg"
+  "static/css/main.92cd434b.chunk.css.map": "/OWLs/static/css/main.92cd434b.chunk.css.map",
+  "static/media/index.scss": "/OWLs/static/media/map.328ad127.jpg"
 }
